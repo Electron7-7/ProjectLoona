@@ -1,0 +1,32 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1698728728
+README.md::TextFile::-1::1698717603::0::1::::<><>::
+::res://Assets/::1698719452
+::res://Assets/Materials and Textures/::1698719858
+SourceOrange.tres::StandardMaterial3D::1920688069765672162::1698719858::0::1::::<><>::uid://34gn5y2km4hr::::res://Assets/Materials and Textures/Those Source Engine Dev Textures/orange.png
+::res://Assets/Materials and Textures/Those Source Engine Dev Textures/::1698719799
+black.png::CompressedTexture2D::7630834943170647826::1698719478::1698719478::1::::<><>::
+blue.png::CompressedTexture2D::7401511015730770622::1698719478::1698719478::1::::<><>::
+cyan.png::CompressedTexture2D::8059456594137751469::1698719478::1698719478::1::::<><>::
+dark_grey.png::CompressedTexture2D::521940633426603463::1698719478::1698719478::1::::<><>::
+green.png::CompressedTexture2D::7517152245779854907::1698719478::1698719478::1::::<><>::
+light_grey.png::CompressedTexture2D::7999015837946828877::1698719478::1698719478::1::::<><>::
+orange.png::CompressedTexture2D::2025543708026438227::1698719478::1698719799::1::::<><>::
+pastel_blue.png::CompressedTexture2D::8055188672048661580::1698719478::1698719478::1::::<><>::
+pastel_brown.png::CompressedTexture2D::350450392609291904::1698719478::1698719478::1::::<><>::
+pastel_green.png::CompressedTexture2D::602203783998964116::1698719478::1698719478::1::::<><>::
+pastel_purple.png::CompressedTexture2D::5018867938971011044::1698719478::1698719478::1::::<><>::
+pastel_red.png::CompressedTexture2D::3146446683730268098::1698719478::1698719478::1::::<><>::
+purple.png::CompressedTexture2D::6941629852107697187::1698719478::1698719478::1::::<><>::
+red.png::CompressedTexture2D::8889756040504770077::1698719478::1698719478::1::::<><>::
+teal.png::CompressedTexture2D::8325802945142653146::1698719478::1698719478::1::::<><>::
+yellow.png::CompressedTexture2D::117447724173813740::1698719478::1698719478::1::::<><>::
+::res://Assets/Resources/::1698729634
+default_env.tres::Environment::4466674702799569129::1698729725::0::1::::<><>::
+::res://Assets/Scenes/::1698729634
+Player3D.tscn::PackedScene::4894968966229885280::1698729634::0::1::::<><>::res://Assets/Scripts/player_controller.gd
+Main.tscn::PackedScene::3683779224051029955::1698729725::0::1::::<><>::
+Testing.tscn::PackedScene::3290923621426208766::1698729642::0::1::::<><>::uid://2mnpmng5eu15::::res://Assets/Materials and Textures/SourceOrange.tres<>uid://cb0fon2q1redc::::res://Assets/Scenes/Player3D.tscn
+::res://Assets/Scripts/::1698729379
+player_controller.gd::GDScript::-1::1698729379::0::1::::Player3D<>CharacterBody3D<>::
+Main.gd::GDScript::-1::1698729708::0::1::::MrManager<>Node<>::

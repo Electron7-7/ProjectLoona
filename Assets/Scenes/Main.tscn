@@ -1,3 +1,7 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=3 uid="uid://bsqpknj28e88n"]
 
-[node name="Main" type="Node"]
+[ext_resource type="Script" path="res://Assets/Scripts/MrManager.gd" id="1_l6yp0"]
+
+[node name="MrManager" type="Node"]
+script = ExtResource("1_l6yp0")
+level_list = Array[PackedScene]([null])
