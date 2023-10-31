@@ -1,4 +1,4 @@
-extends KinematicBody
+extends CharacterBody3D
 
 #### VARIABLES ####
 var mouse_sensitivity = 0.06
@@ -15,8 +15,8 @@ var veloH = Vector3()
 var movement = Vector3()
 var gravityVector = Vector3()
 
-onready var head = $Head
-onready var ground_check = $_GroundCheck
+@onready var head = $Head
+@onready var ground_check = $_GroundCheck
 #### VARIABLES ####
 
 #### FUNCTIONS ####
@@ -51,13 +51,15 @@ func PlayerMovement(delta):
 	if Input.is_action_pressed("moveRight"):
 		direction += transform.basis[0]
 
-	veloH = veloH.linear_interpolate(direction.normalized() * speed, horizontal_acceleration * delta)
+	veloH = veloH.lerp(direction.normalized() * speed, horizontal_acceleration * delta)
 
 	movement[0] = veloH[0] + gravityVector[0]
 	movement[1] = gravityVector[1]
 	movement[2] = veloH[2] + gravityVector[2]
 
-	move_and_slide(movement, Vector3.UP) # warning-ignore:return_value_discarded
+	set_velocity(movement)
+	set_up_direction(Vector3.UP)
+	move_and_slide() # warning-ignore:return_value_discarded
 #### FUNCTIONS ####
 
 func _ready():
@@ -65,9 +67,9 @@ func _ready():
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotate_y(deg2rad(-event.relative[0] * mouse_sensitivity))
-		head.rotate_x(deg2rad(-event.relative[1] * mouse_sensitivity))
-		head.rotation[0] = clamp(head.rotation[0], deg2rad(-89), deg2rad(89))
+		rotate_y(deg_to_rad(-event.relative[0] * mouse_sensitivity))
+		head.rotate_x(deg_to_rad(-event.relative[1] * mouse_sensitivity))
+		head.rotation[0] = clamp(head.rotation[0], deg_to_rad(-89), deg_to_rad(89))
 
 	if event.is_action_pressed("Fire"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
