@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm5fbcdwmlxw5"]
+
+[ext_resource type="Material" uid="uid://2mnpmng5eu15" path="res://Assets/Materials and Textures/SourceOrange.tres" id="1_ctgol"]
+[ext_resource type="PackedScene" uid="uid://cb0fon2q1redc" path="res://Assets/Scenes/Player3D.tscn" id="2_jhfmq"]
+
+[node name="Testing" type="Node3D"]
+
+[node name="Player3D" parent="." instance=ExtResource("2_jhfmq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Geometry" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Floor" type="CSGBox3D" parent="Geometry"]
+size = Vector3(10, 1, 10)
+material = ExtResource("1_ctgol")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
